@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>TD-tests-exo4</title>
+  <style>
+    html {
+      line-height: 1.7;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 40em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin-top: 1.7em;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.7em;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1.7em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1.7em 0 1.7em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      font-style: italic;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      background-color: #f0f0f0;
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+    }
+    pre {
+      line-height: 1.5em;
+      padding: 1em;
+      background-color: #f0f0f0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin-top: 1.7em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border-bottom: 1px solid lightgray;
+      padding: 1em 3em 1em 0;
+    }
+    header {
+      margin-bottom: 6em;
+      text-align: center;
+    }
+    nav a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="tests---exercice-4">Tests - exercice 4</h1>
+<h2 id="question-a">question a</h2>
+<p>La région critique est l’ensemble des couples <span class="math inline">(x_1,x_2)</span> tels que <span class="math inline">x_1+x_2&gt;a</span>.</p>
+<p>Utiliser la propriété suivante :</p>
+<p>si <span class="math inline">X_1</span> suit la loi <span class="math inline">N(\mu_1,\sigma_1)</span> et <span class="math inline">X_2</span> suit la loi <span class="math inline">N(\mu_2,\sigma_2)</span> et si <span class="math inline">X_1</span> et <span class="math inline">X_2</span> sont des variables indépendantes, alors <span class="math inline">X_1+X_2</span> suit la loi <span class="math inline">N(\mu_1+\mu_2,\sqrt{\sigma_1^2+\sigma_2^2})</span></p>
+<p>La somme <span class="math inline">X_1+X_2</span> suit donc ici <span class="math inline">N(0+0,\sqrt{1^2+1^2})</span> c.a.d. <span class="math inline">N(0,\sqrt{2})</span></p>
+<p>Ainsi <span class="math inline">\quad</span> <span class="math inline">p(X_1+X_2&gt;a)</span> <span class="math inline">\quad</span> = <span class="math inline">\quad</span> <span class="math inline">p(\frac{X_1+X_2}{\sqrt{2}}&gt;\frac{a}{\sqrt{2}})</span></p>
+<p><span class="math inline">\frac{X_1+X_2}{\sqrt{2}}</span> suit une loi normale centrée réduite donc on peut lire <span class="math inline">p(\frac{X_1+X_2}{\sqrt{2}} \leq \frac{a}{\sqrt{2}})</span> dans la table de la fonction de répartition de la loi normale.</p>
+<p>On cherche <span class="math inline">a</span> tel que <span class="math inline">p(\frac{X_1+X_2}{\sqrt{2}}&gt;\frac{a}{\sqrt{2}})=0.05</span> or <span class="math inline">p(\frac{X_1+X_2}{\sqrt{2}} \leq \frac{a}{\sqrt{2}})=1-p(\frac{X_1+X_2}{\sqrt{2}}&gt;\frac{a}{\sqrt{2}})</span>. Pour <span class="math inline">p(\frac{X_1+X_2}{\sqrt{2}} \leq \frac{a}{\sqrt{2}})=0.95</span> on trouve <span class="math inline">\frac{a}{\sqrt{2}}=1.65</span> soit <span class="math inline">a=2.33</span></p>
+<p>En conclusion, le test construit est qu’on considère l’hypothèse <span class="math inline">H_0</span> valide si <span class="math inline">a&lt;2.33</span>.</p>
+<h2 id="question-b">question b</h2>
+<p>Dans cette question, on utilise le seuil de 2.33 trouvé précédemment.</p>
+<p>On cherche l’erreur de 2eme espèce, qui va amener à rejeter <span class="math inline">H_1</span> à tort, c’est à dire : - les deux tirages se font selon l’hypothèse <span class="math inline">H_1</span>, c.a.d. la somme <span class="math inline">X_1+X_2</span> suit donc ici <span class="math inline">N(1+1,\sqrt{1^2+1^2})</span> c.a.d. <span class="math inline">N(2,\sqrt{2})</span> - on obtient une somme <span class="math inline">X_1+X_2</span> inférieure à 2.33</p>
+<p><span class="math display">p((X_1+X_2) \leq 2.33)=\beta</span> <span class="math display">p(\frac{(X_1+X_2)-2}{\sqrt{2}}) \leq \frac{2.33-2}{\sqrt{2}})=\beta</span></p>
+<p>On trouve en lisant la table que <span class="math inline">\beta=0.591</span></p>
+<p><img src="fig-exo4.jpg" /></p>
+</body>
+</html>
