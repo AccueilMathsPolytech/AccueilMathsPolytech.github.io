@@ -140,16 +140,12 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="exercice-3">Exercice 3</h1>
-<p>Appelons <span class="math inline">X</span> la variable aléatoire donnant le nombre de faces apparues en 64 lancers. Si la pièce est parfaite, <span class="math inline">X</span> suite une loi binomiale de paramètres (n=64,p=1/2). On peut faire l’approximation de cette loi par la loi normale de paramètres (<span class="math inline">\mu</span>=32,<span class="math inline">\sigma</span>=4).</p>
-<p><img src="better-binomial.jpg" /></p>
-<p>La démarche consiste à poser l’hypothèse (classiquement notée <span class="math inline">H_0</span>) selon laquelle la pièce est effectivement régulière puis déterminer l’intervalle de “nombre de faces” où <span class="math inline">X</span> a une chance très élevée de tomber par la seule raison des fluctuations (aléatoires) d’échantillonnage.</p>
-<p>“Au seuil de 0.01” signifie qu’on souhaite que l’erreur de première espèce (le risque d’accuser à tort la pièce d’être irrégulière) soit de 1%.</p>
-<p>On cherche un intervalle centré sur 32 (ça n’est pas écrit dans l’énoncé donc c’est une hypothèse qu’on fait, qui nous permet de formule le problème comme la recherche de l’intervalle <span class="math inline">[32-t,32+t]</span> tel que <span class="math display">p(32-t\leq X \leq 32+t) = 0.99</span></p>
-<p>c.a.d. <span class="math inline">\quad</span> <span class="math display">p(\frac{32-t-32}{4}\leq \frac{X-32}{4} \leq \frac{32+t-32}{4})=0.99</span> <span class="math display">p(\frac{-t}{4}\leq Z \leq \frac{t}{4})=0.99</span> où <span class="math inline">Z</span> est une variable qui suit une loi normale centrée réduite.</p>
-<p>or <span class="math display">p(\frac{-t}{4}\leq Z \leq \frac{t}{4}) = F(\frac{-t}{4}) - F(\frac{-t}{4})</span></p>
-<p>et <span class="math display">F(\frac{-t}{4})=1-F(\frac{t}{4})</span> grâce à la symétrie de la loi normale centrée réduite par rapport à 0</p>
-<p>On cherche donc <span class="math inline">t</span> tel que <span class="math display">2F(\frac{t}{4})-1=0.99</span> La table donne <span class="math inline">\frac{t}{4}=2.58</span> et on déduit que <span class="math inline">[32-t,32+t]=[21.68, 42.32]</span></p>
-<p>En choisissant d’accepter la pièce comme régulière si le nombre de faces est entre 22 et 42 inclus, on obtient approximativement une erreur de première espèce de 0.01</p>
+
+TD stats sur les tests : exercice 3  corrigé <a href="https://accueilmathspolytech.github.io/TD-tests-exo3.html"> ici </a>
+
+TD stats sur les tests : exercice 2  corrigé <a href="https://accueilmathspolytech.github.io/TD-tests-exo3.html"> ici </a>
+
+TD stats sur le khi2 : exercice 2  corrigé <a href="https://accueilmathspolytech.github.io/TD-khi2.exo2.html"> ici </a>
+
 </body>
 </html>
