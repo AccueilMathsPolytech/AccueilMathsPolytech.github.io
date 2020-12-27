@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>TD-khi2-exo3</title>
+  <style>
+    html {
+      line-height: 1.7;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 40em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin-top: 1.7em;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.7em;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1.7em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1.7em 0 1.7em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      font-style: italic;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      background-color: #f0f0f0;
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+    }
+    pre {
+      line-height: 1.5em;
+      padding: 1em;
+      background-color: #f0f0f0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin-top: 1.7em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border-bottom: 1px solid lightgray;
+      padding: 1em 3em 1em 0;
+    }
+    header {
+      margin-bottom: 6em;
+      text-align: center;
+    }
+    nav a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="khi2---exercice-3">Khi2 - Exercice 3</h1>
+<p>L’objectif général va être de regarder si les intentions de vote sont indépendantes de la ville, c.a.d. si les variations d’effectifs dans les intentions de vote sont suffisamment petites pour s’expliquer par des fluctuations d’échantillonage.</p>
+<p>La démarche consiste donc à supposer cette indépendance et à calculer les intentions de vote dans chaque ville, sous cette hypothèse.</p>
+<p>Attention, si les intentions de vote théoriques sont les mêmes dans les 3 villes si on exprime ces intentions en probabilité (ou proportion) de voter pour tel ou tel candidat, le <em>nombre</em> de personnes qu’on s’attend à indiquer une intention de vote pour tel ou tel candidat va dépendre du nombre de personnes interrogées dans la ville.</p>
+<p>Avec l’hypothèse d’indépendance entre intention de vote et ville, on peut constater que dans le pays (supposé être constitué de l’union des 3 villes), il y a 125 intentions de vote pour A, 100 pour B, 85 pour C. Pour estimer les intentions de vote pour chaque candidat dans chaque ville, il faudra répartir ces 3 valeurs (125,100,85) sur les villes, pour chacune au prorata de la population interrogée des villes dans le pays. Le nombre d’intentions de vote pour un candidat dans une ville dépend ainsi d’une intention nationale de vote pour le candidat et de la population interrogée de la ville, mais pas d’une tendance particulière de cette ville favorable ou défavorable à ce candidat.</p>
+<p>Pour mener ce calcul, on a besoin de calculer les populations interrogées totales des villes : Kagoul 80, Casinoville 130, Lesplaines 80. Il y a donc 310 personnes interrogées dans le pays.</p>
+<p>Sous l’hypothèse d’indépendance discutée plus haut, à Kagoul on devrait s’attendre à 310.125/310.100/310 intentions de vote pour le candidat A soit 40,3 votes. On peut mener ainsi les 9 calculs et aboutir au tableau d’effectifs théoriques suivant :</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Kagoul</th>
+<th>Casinoville</th>
+<th>Lesplaines</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>40.3</td>
+<td>52.4</td>
+<td>32.3</td>
+<td>125</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>32.3</td>
+<td>41.9</td>
+<td>25.8</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>27.4</td>
+<td>35.7</td>
+<td>21.9</td>
+<td>85</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>100</td>
+<td>130</td>
+<td>80</td>
+<td>310</td>
+</tr>
+</tbody>
+</table>
+<p>On peut alors calculer une statistique de <span class="math inline">\chi^2</span> sur les 9 cases : <span class="math display">\chi^2 = \sum_{villes} \sum_{candidats} \frac{\text{(effectif théorique - effectif observé)}^2}{\text{effectif théorique}^2}</span> <span class="math display">\chi^2 = 10,36</span></p>
+<p>Dans ce problème, il y a (nb lignes -1).(nb colonnes -1)=(3-1).(3-1)=4 degrés de liberté. En effet, les effectifs totaux par ville et par électeurs sont supposés fixes, vis à vis fluctuations d’échantillonage qui nous intéressent dans cet exercice.</p>
+<p>Cherchons dans la tableau du <span class="math inline">\chi^2</span> le seuil qui ne peut être dépassé qu’avec une probabilité de 5%, sous l’hypothèse d’indépendance. On trouve que ce seuil vaut 9,488.</p>
+<p>La valeur de <span class="math inline">\chi^2</span> calculée pour la situation de l’exercice est proche du seuil à 5%. Il est donc difficile de conclure clairement sur l’indépendance.</p>
+<p>La décision de faire une campagne spécifique par ville peut alors dépendre des surcoûts de ces spécificités, qui ne sont pas discutés dans l’exercice.</p>
+</body>
+</html>
